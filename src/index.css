@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 92%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 92%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 92%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 85%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 0 0% 18%;
+    --accent-foreground: 0 0% 92%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 92%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 40%;
+
+    --radius: 0.25rem;
+
+    /* Olympic accent colors — desaturated */
+    --olympic-blue: 210 40% 35%;
+    --olympic-yellow: 45 50% 45%;
+    --olympic-green: 140 30% 30%;
+    --olympic-red: 0 45% 40%;
+    --olympic-black: 0 0% 15%;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 92%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 92%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 0 0% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Memorial-specific utilities */
+@layer utilities {
+  .font-serif-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-sans-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .grayscale-memorial {
+    filter: grayscale(100%);
+    transition: filter 0.8s ease;
+  }
+
+  .grayscale-memorial:hover {
+    filter: grayscale(0%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
